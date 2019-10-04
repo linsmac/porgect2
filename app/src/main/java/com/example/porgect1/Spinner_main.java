@@ -36,11 +36,7 @@ public class Spinner_main {//最簡單一的字體太小
     }
 
     public void setSpinner(Spinner spinner){
-        this.spinner = spinner;
-        this.kindList = new ArrayAdapter<String>(context, R.layout.support_simple_spinner_dropdown_item, kind);
 
-
-        this.spinner.setAdapter(kindList);
     }
 
 //    protected void onCreat(Bundle savedInstanceState){
