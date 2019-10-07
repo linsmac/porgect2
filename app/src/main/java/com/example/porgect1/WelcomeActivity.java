@@ -22,7 +22,7 @@ public class WelcomeActivity extends Activity {
                 case GOTO_MAIN_ACTIVITY:
                     Intent intent = new Intent();
 
-                    intent.setClass(WelcomeActivity.this, MainActivity.class);
+                    intent.setClass(WelcomeActivity.this, Login.class);
                     startActivity(intent);
                     finish();
                     break;

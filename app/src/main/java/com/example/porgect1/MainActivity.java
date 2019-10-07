@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import android.widget.CalendarView;
 import android.widget.DatePicker;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -27,15 +28,27 @@ public class MainActivity extends AppCompatActivity {
     private Spinner spinner;
     private Spinner_main spinner_main;
     private TextView date;
-
+    boolean logon = false;
     TextView dateTextView;
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+
+
+        TextView moneyback = findViewById(R.id.moneyback);//接收AddView的money數值
+        Intent intent = getIntent();
+        String value = intent.getStringExtra("MONEY");
+        moneyback.setText(value);
+
         ImageView nextPageBtn = (ImageView)findViewById(R.id.plus);
         dateTextView = (TextView)findViewById(R.id.dateTextView);
-
         nextPageBtn.setOnClickListener(new View.OnClickListener() {
 
 
